@@ -1,12 +1,11 @@
 {
   "name": "forkify",
   "version": "1.0.0",
-  "description": "Recipe Application",
-  "main": "index.html",
+  "description": "Recipe Website",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
-  "author": "Prince",
+  "author": "Prince Inc.",
   "license": "ISC"
 }
