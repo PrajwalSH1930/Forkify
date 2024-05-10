@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Forkify &mdash; Over 1,000,000 recipes</title>
-    <link rel="stylesheet" href="./sass/styles.scss" />
+    <link rel="stylesheet" href="sass/styles.scss" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-    <script defer src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <img src="" alt="" class="header__logo" />
+        <img src="images/logo.png" alt="" class="header__logo" />
         <form action="" class="search">
           <input
             type="text"
@@ -56,9 +56,9 @@
                     <p>No bookmarks yet, FInd a nice recipe and bookmark it!</p>
                   </div>
                   <li class="preview">
-                    <a href="" class="preview__link">
+                    <a href="preview__link" class="preview__link">
                       <figure class="preview__fig">
-                        <img src="" alt="" />
+                        <img src="images/logo.png" alt="" />
                       </figure>
                       <div class="preview__data">
                         <h4 class="preview__name">
@@ -77,9 +77,9 @@
       <div class="search__details">
         <ul class="results">
           <li class="preview">
-            <a href="" class="preview__link preview__link--active">
+            <a href="preview__link" class="preview__link preview__link--active">
               <figure class="preview__fig">
-                <img src="" alt="" />
+                <img src="images/logo.png" alt="" />
               </figure>
               <div class="preview__date">
                 <h4 class="preview__name">Pasta With tomato cream...</h4>
@@ -113,7 +113,7 @@
         <div class="message">
           <div>
             <svg>
-              <use href=""></use>
+              <use href="images/icons.svg#icon-smile"></use>
             </svg>
           </div>
           <p>Start by searching for a recipe or an ingredient. Have fun!</p>
@@ -132,7 +132,7 @@
           <p>No recipes found for your query. Please try again!</p>
         </div>
         <figure class="recipe__flg">
-          <img src="" alt="" class="recipe__img" />
+          <img src="images/logo.png" alt="" class="recipe__img" />
           <h1 class="recipe__title">
             <span></span>
           </h1>
@@ -205,7 +205,11 @@
             <span>The Pioneer Woman</span> Please Check out the directions at
             their website
           </p>
-          <a href="" class="btn--small recipe__btn" target="_blank">
+          <a
+            href="preview__link"
+            class="btn--small recipe__btn"
+            target="_blank"
+          >
             <span>Directions</span>
             <svg>
               <use href="images/icons.svg#icon-arrow-right"></use>

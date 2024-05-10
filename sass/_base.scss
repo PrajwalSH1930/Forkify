@@ -1,49 +1,50 @@
+// $color-primary: #f59a83;
 $color-primary: #f38e82;
-$color-grad-1: #fdbd89;
+$color-grad-1: #fbdb89;
 $color-grad-2: #f48982;
 
-$color-grey-light-1: #f9f5f3;
-$color-grey-light-2: #f2efee;
-$color-grey-light-3: #d3c7c3;
-$color-grey-dark-1: #615551;
-$color-grey-dark-2: #918581;
+$color-grey-light-1: #f9f5f3; // Light background
+$color-grey-light-2: #f2efee; // Light lines
+$color-grey-light-3: #d3c7c3; // Light text (placeholder)
+$color-grey-dark-1: #615551; // Normal text
+$color-grey-dark-2: #918581; // Lighter text
 
 $gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
 
-$bp-large: 78.15em;
-$bp-medium: 61.25em;
-$bp-small: 37.5em;
-$bp-smallest: 31.25em;
+$bp-large: 78.15em; // 1250px
+$bp-medium: 61.25em; // 980px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
+
 *,
-*::after,
-*::before {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
   font-size: 62.5%;
 
-  @media only screen and(max-width:$bp-medium) {
+  @media only screen and (max-width: $bp-medium) {
     font-size: 50%;
   }
 }
 
 body {
-  color: #444;
-  line-height: 1.6;
-  font-family: "Poppins";
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
+  line-height: 1.6;
+  color: $color-grey-dark-1;
   background-image: $gradient;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: calc(100vh-2 * 4vw);
+  min-height: calc(100vh - 2 * 4vw);
 }
 
 .container {
@@ -53,15 +54,16 @@ body {
   background-color: #fff;
   border-radius: 9px;
   overflow: hidden;
-  box-shadow: 0 0.7rem 2rem rgba($color-grey-dark-1, 0.125),
-    0 1rem 2rem rgba($color-grey-dark-1, 0.2);
+  box-shadow: 0 2rem 6rem 0.5rem rgba($color-grey-dark-1, 0.2);
 
   display: grid;
   grid-template-rows: 10rem minmax(100rem, auto);
   grid-template-columns: 1fr 2fr;
-  grid-template-areas: "head head" "last recipe";
+  grid-template-areas:
+    "head head"
+    "list recipe";
 
-  @media only screen and(max-width:$bp-large) {
+  @media only screen and (max-width: $bp-large) {
     max-width: 100%;
     margin: 0;
     border-radius: 0;

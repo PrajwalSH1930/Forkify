@@ -45,17 +45,18 @@
       width: auto;
 
       &::placeholder {
-        color: #fff;
+        color: white;
       }
     }
   }
+
   &__btn {
     font-weight: 600;
     font-family: inherit;
   }
 }
 
-.na {
+.nav {
   align-self: stretch;
   margin-right: 2.5rem;
 
@@ -106,6 +107,7 @@
 .bookmarks {
   padding: 1rem 0;
   position: absolute;
+  // right: 0;
   right: -2.5rem;
   z-index: 10;
   width: 40rem;
@@ -116,7 +118,7 @@
   opacity: 0;
   transition: all 0.5s 0.2s;
 
-  &__lis {
+  &__list {
     list-style: none;
   }
 
