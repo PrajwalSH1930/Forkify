@@ -8,7 +8,7 @@ class RecipeView extends View {
   _message = ``;
 
   addHandlerRender(handler) {
-    ["hashChange", "load"].forEach((ev) =>
+    ["hashchange", "load"].forEach((ev) =>
       window.addEventListener(ev, handler)
     );
   }
@@ -78,11 +78,13 @@ class RecipeView extends View {
               </button>
             </div>
           </div>
-          <div class="recipe__user-generated">
+
+          <div class="recipe__user-generated ${this._data.key ? "" : "hidden"}">
             <svg class="">
               <use href="${icons}#icon-user"></use>
             </svg>
           </div>
+
           <button class="btn--round btn--bookmark">
             <svg class="">
               <use href="${icons}#icon-bookmark${
